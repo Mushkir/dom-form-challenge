@@ -27,6 +27,7 @@ const handleSubmit = (event) => {
 
   const formData = new FormData(formEl);
   const data = Object.fromEntries(formData);
+  
   console.log(data);
 
   validateTypeOfEvent();
