@@ -1,12 +1,13 @@
 // * Getting form elements
-const formEl = document.forms.bookingsForm;             // !Form Element
-const btnShow = document.querySelector("#btnShow");     // !Form Button Element
-const firstNameEl = formEl.elements.firstName;          // !First Name Input Element
-const lastNameEl = formEl.elements.lastName;            // !Last Name Input Element
-const contactNumberEl = formEl.elements.contactNumber;  // !Contact Number Input Element
-const userEmailEl = formEl.elements.userEmail;          // !Email Input Element
-const typesOfEventEl = formEl.elements.typesOfEvent;    // !Types of Events Select Element
-const dateOfEventEl = formEl.elements.dateOfEvent;      // !Date of Events: Date Picker Element
+const formEl = document.forms.bookingsForm;                     // !Form Element
+const btnShow = document.querySelector("#btnShow");             // !Form Button Element
+const firstNameEl = formEl.elements.firstName;                  // !First Name Input Element
+const lastNameEl = formEl.elements.lastName;                    // !Last Name Input Element
+const contactNumberEl = formEl.elements.contactNumber;          // !Contact Number Input Element
+const userEmailEl = formEl.elements.userEmail;                  // !Email Input Element
+const typesOfEventEl = formEl.elements.typesOfEvent;            // !Types of Events Select Element
+const dateOfEventEl = formEl.elements.dateOfEvent;              // !Date of Events: Date Picker Element
+const buttonAcceptEl = document.querySelector("#buttonAccept")  // !Accept Button Element
 
 // * Output Div Elements
 let userFullNameEl = document.querySelector("#userFullName");
@@ -71,6 +72,11 @@ function gettingAndSettingValues(formData) {
   eventDateEl.innerHTML = formData.dateOfEvent;
 
 }
+
+buttonAcceptEl.addEventListener("click", () => {
+
+  alert("Thank you for contacting NippiX. Our team will contact you soon...💖")
+})
 
 // Todo: When user click Show Detail button, It need to show outputs into relevent output elements
 function showOutput() {
