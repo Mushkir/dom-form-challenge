@@ -39,6 +39,14 @@ const handleSubmit = (event) => {
   // console.log(userFirstNameEl);
 };
 
+
+// Todo: Need to Validate inputs using OnKeyUp Validation
+firstNameEl.addEventListener("keyup", validateFirstName)
+lastNameEl.addEventListener("keyup", validateLastName)
+contactNumberEl.addEventListener("keyup", validatePhoneNum)
+userEmailEl.addEventListener("keyup", validateEmail)
+
+
 // !Form Event Listener
 formEl.addEventListener("submit", handleSubmit);
 
@@ -73,10 +81,13 @@ function gettingAndSettingValues(formData) {
 
 }
 
+
+//  Todo: Alert Message
 buttonAcceptEl.addEventListener("click", () => {
 
   alert("Thank you for contacting NippiX. Our team will contact you soon...💖")
 })
+
 
 // Todo: When user click Show Detail button, It need to show outputs into relevent output elements
 function showOutput() {
